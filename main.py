@@ -34,3 +34,8 @@ df.isnull().sum()
 
 sales_by_country = df.groupby('country')['sales']. sum().sort_values(ascending=False)
 print(sales_by_country.head(10))
+
+sales_by_country.head(10).plot(kind='bar')
+plt.title("top paises por ingresos")
+plt.ylabel("ventas")
+plt.show()
